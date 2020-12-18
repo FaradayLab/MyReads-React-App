@@ -1,3 +1,9 @@
+## How to use
+
+MyReads app allows users to search books and add them to one of three bookshelves: 'Currently Reading', 'Want to Read', and 'Read.
+
+Click the plus icon in the bottom right and make your search query. Simply use the dropdown menus on each book to move them between or remove them from the shelves
+
 # MyReads Project
 
 This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
