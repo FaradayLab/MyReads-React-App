@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// import PropTypes from 'prop-types'
 import * as BooksAPI from './BooksAPI'
 import Book from './Books'
 
 class SearchBooks extends React.Component {
+  // static propTypes = {
+  //   books: PropTypes.array.isRequired,
+  // }
   state = {
     booksOnShelf: this.props.books,
     booksOnShelfIDs: this.props.books.map(book=>book.id),
@@ -17,6 +21,7 @@ class SearchBooks extends React.Component {
     return searchBooks
   }
   searchBooks = ({ target: { value }}) =>{
+    // USE PROPTYPES INSTEAD TO CHECK TYPE, SHOULD BE ARRAY, IT'S OBJECT IF IT RETURNS NO RESULTS
     if(value)
       BooksAPI.search(value).then(books=> 
         books.length ? (books = this.addShelves(books)) && this.setState(()=> ({ books })) : this.setState(()=> ({books: []})))
